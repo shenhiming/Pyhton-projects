@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2005189f-2552-454d-9689-4c64ffe3a99c}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>setup.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <Content Include="release-notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bench\test_simple.py" />
+    <Compile Include="docs\source\conf.py" />
+    <Compile Include="multipledispatch\conflict.py" />
+    <Compile Include="multipledispatch\core.py" />
+    <Compile Include="multipledispatch\dispatcher.py" />
+    <Compile Include="multipledispatch\tests\test_benchmark.py" />
+    <Compile Include="multipledispatch\tests\test_conflict.py" />
+    <Compile Include="multipledispatch\tests\test_core.py" />
+    <Compile Include="multipledispatch\tests\test_dispatcher.py" />
+    <Compile Include="multipledispatch\tests\test_dispatcher_3only.py" />
+    <Compile Include="multipledispatch\utils.py" />
+    <Compile Include="multipledispatch\__init__.py" />
+    <Compile Include="setup.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bench" />
+    <Folder Include="docs\" />
+    <Folder Include="docs\source" />
+    <Folder Include="multipledispatch" />
+    <Folder Include="multipledispatch\tests" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

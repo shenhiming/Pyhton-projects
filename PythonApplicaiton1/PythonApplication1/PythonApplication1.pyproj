@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>531e3af0-77ed-4487-bae5-dfbef64d697f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>PythonApplication1.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonApplication1</Name>
+    <RootNamespace>PythonApplication1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="multipledispatch\conflict.py" />
+    <Compile Include="multipledispatch\core.py" />
+    <Compile Include="multipledispatch\dispatcher.py" />
+    <Compile Include="multipledispatch\tests\test_benchmark.py" />
+    <Compile Include="multipledispatch\tests\test_conflict.py" />
+    <Compile Include="multipledispatch\tests\test_core.py" />
+    <Compile Include="multipledispatch\tests\test_dispatcher.py" />
+    <Compile Include="multipledispatch\tests\test_dispatcher_3only.py" />
+    <Compile Include="multipledispatch\utils.py" />
+    <Compile Include="multipledispatch\__init__.py" />
+    <Compile Include="PythonApplication1.py" />
+    <Compile Include="structshape.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="multipledispatch\" />
+    <Folder Include="multipledispatch\tests\" />
+    <Folder Include="multipledispatch\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="multipledispatch\__pycache__\conflict.cpython-36.pyc" />
+    <Content Include="multipledispatch\__pycache__\core.cpython-36.pyc" />
+    <Content Include="multipledispatch\__pycache__\dispatcher.cpython-36.pyc" />
+    <Content Include="multipledispatch\__pycache__\utils.cpython-36.pyc" />
+    <Content Include="multipledispatch\__pycache__\__init__.cpython-36.pyc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
